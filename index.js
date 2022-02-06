@@ -21,13 +21,13 @@ let teamProfileArray = [];
 function addManagerProfile() {
     inquirer.prompt(managerQuestions)
     .then(function(data) {
-       const managerName = data.managerName;
-       const managerId = data.managerId;
-       const managerEmail = data.managerEmail;
-       const managerOfficeNum = data.managerOffice;
-       const teamMember = new Manager(managerName, managerId, managerEmail, managerOffice);
-       teamProfileArr.push(teamMember);
-       addNonManagerTeamMember();
+        const managerName = data.managerName;
+        const managerId = data.managerId;
+        const managerEmail = data.managerEmail;
+        const managerOfficeNum = data.managerOffice;
+        const teamMember = new Manager(managerName, managerId, managerEmail, managerOffice);
+        teamProfileArray.push(teamMember);
+        addNonManagerTeamMember();
     });
 };
 
@@ -52,12 +52,12 @@ function addNonManagerTeamMember() {
 function addEngineerProfile() {
     inquirer.prompt(engineerQuestions)
     .then (function(data) {
-       const engineerName = data.engineerName;
-       const engineerId = data.engineerId;
-       const engineerEmail = data.engineerEmail;
-       const engineerGithub = data.engineerGithub;
-       const teamMember = new Engineer(engineerName, engineerId, engineerEmail, engineerGithub);
-       teamProfileArr.push(teamMember);
+        const engineerName = data.engineerName;
+        const engineerId = data.engineerId;
+        const engineerEmail = data.engineerEmail;
+        const engineerGithub = data.engineerGithub;
+        const teamMember = new Engineer(engineerName, engineerId, engineerEmail, engineerGithub);
+        teamProfileArray.push(teamMember);
     });
 };
 
@@ -65,12 +65,12 @@ function addEngineerProfile() {
 function addInternProfile() {
     inquirer.prompt(internQuestions)
     .then (function(data) {
-       const internName = data.internName;
-       const internId = data.internId;
-       const internEmail = data.internEmail;
-       const internSchool = data.internSchool;
-       const teamMember = new Intern(internName, internId, internEmail, internSchool);
-        teamProfileArr.push(teamMember);
+        const internName = data.internName;
+        const internId = data.internId;
+        const internEmail = data.internEmail;
+        const internSchool = data.internSchool;
+        const teamMember = new Intern(internName, internId, internEmail, internSchool);
+        teamProfileArray.push(teamMember);
     });
 };
 
@@ -96,9 +96,9 @@ function init() {
         }    
     ])
     .then(function(data) {
-       const teamName = data.teamName;
-       teamProfileArray.push(teamName);
-       addManagerProfile();
+        const teamName = data.teamName;
+        teamProfileArray.push(teamName);
+        addManagerProfile();
     });
 };
  
