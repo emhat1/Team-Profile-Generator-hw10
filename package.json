@@ -1,0 +1,19 @@
+{
+  "name": "team-profile-generator-hw10",
+  "version": "1.0.0",
+  "description": "A program to automatically generate a list of team members and export it to an html file",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emhat1/Team-Profile-Generator-hw10.git"
+  },
+  "author": "Erin Hatherell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emhat1/Team-Profile-Generator-hw10/issues"
+  },
+  "homepage": "https://github.com/emhat1/Team-Profile-Generator-hw10#readme"
+}
