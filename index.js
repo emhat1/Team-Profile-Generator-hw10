@@ -55,7 +55,7 @@ function addEngineerProfile() {
        const engineerName = data.engineerName;
        const engineerId = data.engineerId;
        const engineerEmail = data.engineerEmail;
-       const engineerGithubUsername = data.engineerGithub;
+       const engineerGithub = data.engineerGithub;
        const teamMember = new Engineer(engineerName, engineerId, engineerEmail, engineerGithub);
        teamProfileArr.push(teamMember);
     });
