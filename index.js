@@ -26,8 +26,26 @@ function addManagerProfile() {
        const managerOfficeNum = data.managerOffice;
        const teamMember = new Manager(managerName, managerId, managerEmail, managerOffice);
        teamProfileArr.push(teamMember);
+       addNonManagerTeamMember();
     });
 };
+
+function addNonManagerTeamMember() {
+    inquirer.prompt(addEmployeeQuestion)
+    .then(function(data) {
+        switch (data.menuChoices) {
+            case "Add an Engineer Profile":
+                addEngineerProfile();
+                break;
+            case "Add an Intern Profile":
+                addInternProfile();
+                break;
+            case "Done Generating Profiles":
+                // command to make the html file here - why it so confusing?
+            break;
+        };
+    });
+ };
 
 // Intake of information - Engineer
 function addEngineerProfile() {
@@ -79,6 +97,7 @@ function init() {
     .then(function(data) {
        const teamName = data.teamName;
        teamProfileArray.push(teamName);
+       addManagerProfile();
     });
 };
  
