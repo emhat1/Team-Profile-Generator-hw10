@@ -7,6 +7,7 @@ const inquirer = require('inquirer');
 const managerQuestions = require("./Library/ManagerQuestions.js");
 const engineerQuestions = require("./Library/EngineerQuestions.js");
 const internQuestions = require("./Library/InternQuestions.js");
+const addEmployeeQuestion = require("./Library/AddEmployee.js");
 const Manager = require("./Library/Manager.js");
 const Engineer = require("./Library/Engineer.js");
 const Intern = require("./Library/Intern.js" );
@@ -40,7 +41,7 @@ function addNonManagerTeamMember() {
             case "Add an Intern Profile":
                 addInternProfile();
                 break;
-            case "Done Generating Profiles":
+            case "Team completed, ready to generate team page":
                 // command to make the html file here - why it so confusing?
             break;
         };
