@@ -3,16 +3,16 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 // Setting up constructor functions
-const managerQuestions = require( "./Library/ManagerQuestions.js" );
-const engineerQuestions = require( "./Library/EngineerQuestions.js" );
-const internQuestions = require( "./Library/InternQuestions.js" );
+const managerQuestions = require("./Library/ManagerQuestions.js");
+const engineerQuestions = require("./Library/EngineerQuestions.js");
+const internQuestions = require("./Library/InternQuestions.js");
 
 
 // Set up array for team profile data
 let teamProfileArray = [];
 
 
-// Intake of information
+// Intake of information - Manager
 function addManagerProfile() {
     inquirer.prompt(managerQuestions)
     .then(function(data) {
@@ -25,6 +25,7 @@ function addManagerProfile() {
     });
 };
 
+// Intake of information - Engineer
 function addEngineerProfile() {
     inquirer.prompt(engineerQuestions)
     .then (function(data) {
@@ -37,6 +38,7 @@ function addEngineerProfile() {
     });
 };
 
+// Intake of information - Intern
 function addInternProfile() {
     inquirer.prompt(internQuestions)
     .then (function(data) {
@@ -45,11 +47,36 @@ function addInternProfile() {
        const internEmail = data.internEmail;
        const internSchool = data.internSchool;
        const teamMember = new Intern(internName, internId, internEmail, internSchool);
-        teamProfileArr.push( teamMember );
+        teamProfileArr.push(teamMember);
     });
 };
 
 // Output to HTML file
 
 
+// Start the application and display opening message
+function init() {
+    inquirer.prompt([
+       {
+            type: "input",
+            message: "This is an automated team profile generator.  Please begin by entering the team name",
+            name: "teamName",
+            validate: teamNameInput => {
+                if (teamNameInput && teamNameInput.trim().length > 0) {
+                    return true;
+                }
+                else {
+                    console.log("Please enter the team name:");
+                    return false;
+                };
+            }
+        }    
+    ])
+    .then(function(data) {
+       const teamName = data.teamName;
+       teamProfileArray.push(teamName);
+    });
+};
+ 
 // Initialise function
+init();
