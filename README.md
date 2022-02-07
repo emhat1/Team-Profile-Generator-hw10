@@ -14,7 +14,9 @@
   This app requires inquirer and fs
   
   ## Usage
-  The app is run from the terminal using node
+  The app is run from the terminal using node.  After all relevant information is entered, an html file is generated in the html folder, with the team name   used as the file name.
+  
+  A gif showing the operation of the app, and a screenshot of the resulting file are available in the Examples folder.  
   
   ## License
   MIT
