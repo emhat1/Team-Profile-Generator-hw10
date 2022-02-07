@@ -11,6 +11,7 @@ const addEmployeeQuestion = require("./Library/AddEmployee");
 const Manager = require("./Library/Manager");
 const Engineer = require("./Library/Engineer");
 const Intern = require("./Library/Intern" );
+const holdHtml = require("./Library/HTML-Generation");
 
 
 // Set up array for team profile data
