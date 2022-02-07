@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/emhat1/Team-Profile-Generator-hw10#readme",
   "dependencies": {
-    "i": "^0.3.7"
+    "i": "^0.3.7",
+    "inquirer": "^8.2.0"
   }
 }
