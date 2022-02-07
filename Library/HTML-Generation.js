@@ -21,10 +21,10 @@ module.exports = {
       </head>
 
       <body>
-         <div class = "header">
-         <h1>${teamProfileArray[0]} Team</h1>
-      </div>
-      <div class = "card-container">
+         <div header>
+            <h1>${teamProfileArray[0]} Team</h1>
+         </div>
+      <div class ="container">
       `;
          holdHtmlArray.push(htmlHeader);
 
@@ -38,13 +38,13 @@ module.exports = {
 
                // Assign an icon depending on team member's role
                if (teamProfileArray[i].role === "Manager") {
-                  teamMemberHtml += `<h2 class="bi bi-kanban-fill"> ${teamProfileArray[i].role}</h2>`;
+                  teamMemberHtml += `<h2><i class="bi bi-kanban-fill"></i> ${teamProfileArray[i].role}</h2>`;
                }
                else if (teamProfileArray[i].role === "Engineer") {
-                  teamMemberHtml += `<h2 class="bi bi-lightbulb"> ${teamProfileArray[i].role}</h2>`;
+                  teamMemberHtml += `<h2><i class="bi bi-lightbulb"></i> ${teamProfileArray[i].role}</h2>`;
                }
                else if (teamProfileArray[i].role === "Intern") {
-                  teamMemberHtml += `<h2 class="bi bi-mortarboard-fill">  ${teamProfileArray[i].role}</h2>`;
+                  teamMemberHtml += `<h2><i class="bi bi-mortarboard-fill"></i>  ${teamProfileArray[i].role}</h2>`;
                };
 
                teamMemberHtml += `
