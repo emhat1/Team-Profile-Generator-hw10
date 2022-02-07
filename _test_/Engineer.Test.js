@@ -1,4 +1,4 @@
-const Engineer = require( "../Library/Engineer.js" );
+const Engineer = require("../Library/Engineer");
 
 test("Set engineer's Github username", () => {
    const testGithub = "jeanvaljean";

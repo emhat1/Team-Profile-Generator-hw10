@@ -4,13 +4,13 @@ const inquirer = require('inquirer');
 
 
 // Setting up constructor functions
-const managerQuestions = require("./Library/ManagerQuestions.js");
-const engineerQuestions = require("./Library/EngineerQuestions.js");
-const internQuestions = require("./Library/InternQuestions.js");
-const addEmployeeQuestion = require("./Library/AddEmployee.js");
-const Manager = require("./Library/Manager.js");
-const Engineer = require("./Library/Engineer.js");
-const Intern = require("./Library/Intern.js" );
+const managerQuestions = require("./Library/ManagerQuestions");
+const engineerQuestions = require("./Library/EngineerQuestions");
+const internQuestions = require("./Library/InternQuestions");
+const addEmployeeQuestion = require("./Library/AddEmployee");
+const Manager = require("./Library/Manager");
+const Engineer = require("./Library/Engineer");
+const Intern = require("./Library/Intern" );
 
 
 // Set up array for team profile data
@@ -42,12 +42,12 @@ function addNonManagerTeamMember() {
                 addInternProfile();
                 break;
             case "Team completed, ready to generate team page":
-                // command to make the html file here - why it so confusing?
+                generateHtmlFile();
             break;
         };
     });
  };
-
+ 
 // Intake of information - Engineer
 function addEngineerProfile() {
     inquirer.prompt(engineerQuestions)
