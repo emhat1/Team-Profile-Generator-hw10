@@ -58,6 +58,7 @@ function addEngineerProfile() {
         const engineerGithub = data.engineerGithub;
         const teamMember = new Engineer(engineerName, engineerId, engineerEmail, engineerGithub);
         teamProfileArray.push(teamMember);
+        addNonManagerTeamMember();
     });
 };
 
@@ -71,6 +72,7 @@ function addInternProfile() {
         const internSchool = data.internSchool;
         const teamMember = new Intern(internName, internId, internEmail, internSchool);
         teamProfileArray.push(teamMember);
+        addNonManagerTeamMember();
     });
 };
 
