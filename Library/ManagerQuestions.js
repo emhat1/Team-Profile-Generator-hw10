@@ -1,6 +1,6 @@
 // Questions for setting up the manager profile
 
-[{
+module.exports = [{
     type: "input",
     name: "managerName",
     message: "Please enter the manager's full name",

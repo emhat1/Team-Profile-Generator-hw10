@@ -1,6 +1,6 @@
 // Questions for setting up the intern profile
 
-[{
+module.exports = [{
     type: "input",
     name: "internName",
     message: "Please enter the intern's full name",
