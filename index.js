@@ -24,7 +24,7 @@ function addManagerProfile() {
         const managerName = data.managerName;
         const managerId = data.managerId;
         const managerEmail = data.managerEmail;
-        const managerOfficeNum = data.managerOffice;
+        const managerOffice = data.managerOffice;
         const teamMember = new Manager(managerName, managerId, managerEmail, managerOffice);
         teamProfileArray.push(teamMember);
         addNonManagerTeamMember();
@@ -75,7 +75,30 @@ function addInternProfile() {
 };
 
 // Output to HTML file
+const writeToFile = (holdHtmlArray) => {
+    return new Promise((resolve, reject) => {
+       // Name the file after the team name
+       outputFileName = teamProfileArray[0].toLowerCase();
+       outputFileName = outputFileName.replace(/ /g, "-");
+ 
+       fs.writeFile(`./html/${outputFileName}.html`,holdHtmlArray.join(""), function(err) {
+          if (err) {
+                reject(err);
+             return;
+            };
+          resolve({
+                ok: true,
+                message: 'Your html file has been created in the "html" folder' 
+            });
+        });
+    });
+ };
 
+function generateHtmlFile() {
+    const holdHtmlArray = holdHtml.generateHtml(teamProfileArray);
+    writeToFile(holdHtmlArray);
+};
+ 
 
 // Start the application and display opening message
 function init() {
